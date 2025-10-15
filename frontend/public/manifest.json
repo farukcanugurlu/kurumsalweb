@@ -1,0 +1,24 @@
+{
+  "short_name": "Kurumsal Web Sitesi",
+  "name": "Kurumsal Web Sitesi",
+  "description": "Kurumsal web sitesi şablonu ve yönetim paneli",
+  "icons": [
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e3a8a",
+  "background_color": "#ffffff",
+  "lang": "tr",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}

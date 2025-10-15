@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tumorsiad.org.tr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin panel
+Disallow: /yonetim/
+Disallow: /api/
+
+# Allow important pages
+Allow: /
+Allow: /hakkimizda
+Allow: /organizasyon
+Allow: /haberler
+Allow: /iletisim

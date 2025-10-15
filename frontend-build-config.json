@@ -1,0 +1,12 @@
+# Frontend Build için package.json script'i ekle
+# Bu script'i frontend/package.json'a ekleyin
+
+{
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:production": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Favicon - Kurumsal Web Sitesi logosu -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1e3a8a" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Kurumsal Web Sitesi - Kurumsal web sitesi şablonu ve yönetim paneli. Modern, responsive ve kullanıcı dostu kurumsal web sitesi çözümü." />
+    <meta name="keywords" content="Kurumsal Web Sitesi, kurumsal web sitesi, şablon, yönetim paneli, responsive web sitesi, modern web sitesi" />
+    <meta name="author" content="Kurumsal Web Sitesi" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="Turkish" />
+    <meta name="geo.region" content="TR" />
+    <meta name="geo.placename" content="İstanbul" />
+    <meta name="geo.position" content="41.0082;28.9784" />
+    <meta name="ICBM" content="41.0082, 28.9784" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kurumsal Web Sitesi" />
+    <meta property="og:description" content="Kurumsal Web Sitesi - Kurumsal web sitesi şablonu ve yönetim paneli. Modern, responsive ve kullanıcı dostu kurumsal web sitesi çözümü." />
+    <meta property="og:url" content="https://kurumsalwebsitesi.com" />
+    <meta property="og:site_name" content="Kurumsal Web Sitesi" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:image" content="https://kurumsalwebsitesi.com/favicon.ico" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Kurumsal Web Sitesi Logo" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:updated_time" content="2025-01-03T12:00:00Z" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kurumsal Web Sitesi" />
+    <meta name="twitter:description" content="Kurumsal Web Sitesi - Kurumsal web sitesi şablonu ve yönetim paneli. Modern, responsive ve kullanıcı dostu kurumsal web sitesi çözümü." />
+    <meta name="twitter:image" content="https://kurumsalwebsitesi.com/favicon.ico" />
+    <meta name="twitter:image:alt" content="Kurumsal Web Sitesi Logo" />
+    <meta name="twitter:site" content="@kurumsalwebsitesi" />
+    <meta name="twitter:creator" content="@kurumsalwebsitesi" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-TileColor" content="#1e3a8a" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//kurumsalwebsitesi.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+        custom_map: {'custom_parameter_1': 'organization_type'}
+      });
+      
+      // Kurumsal Web Sitesi özel tracking
+      gtag('config', 'GA_MEASUREMENT_ID', {
+        custom_parameters: {
+          'organization': 'Kurumsal Web Sitesi',
+          'organization_type': 'corporate',
+          'region': 'global',
+          'language': 'turkish'
+        }
+      });
+    </script>
+    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kurumsalwebsitesi.com" />
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <title>Kurumsal Web Sitesi</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+      <!-- Kurumsal Web Sitesi logosunu anında favicon olarak ayarla -->
+      <script>
+        (function() {
+          // Tüm mevcut favicon linklerini kaldır
+          var existingLinks = document.querySelectorAll("link[rel*='icon']");
+          existingLinks.forEach(function(link) { link.remove(); });
+          
+          // Kurumsal Web Sitesi logosunu favicon olarak ekle
+          var favicon = document.createElement('link');
+          favicon.rel = 'icon';
+          favicon.type = 'image/x-icon';
+          favicon.href = '/favicon.ico';
+          document.head.appendChild(favicon);
+          
+          // Shortcut icon da ekle
+          var shortcutFavicon = document.createElement('link');
+          shortcutFavicon.rel = 'shortcut icon';
+          shortcutFavicon.type = 'image/x-icon';
+          shortcutFavicon.href = '/favicon.ico';
+          document.head.appendChild(shortcutFavicon);
+        })();
+      </script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

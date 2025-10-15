@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Yeni Profil",
+    "Projects": [
+      {
+        "Path": "dernekWeb.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "frontend\\frontend.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]
