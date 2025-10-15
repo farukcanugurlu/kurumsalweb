@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create React Logos</title>
+</head>
+<body>
+    <canvas id="canvas192" width="192" height="192"></canvas>
+    <canvas id="canvas512" width="512" height="512"></canvas>
+    <canvas id="canvas32" width="32" height="32"></canvas>
+    
+    <script>
+        function createLogo(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Draw React logo
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const outerRadius = size * 0.35;
+            const innerRadius = size * 0.2;
+            const dotRadius = size * 0.05;
+            
+            // Outer circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = '#61DAFB';
+            ctx.fill();
+            ctx.strokeStyle = '#282C34';
+            ctx.lineWidth = size * 0.02;
+            ctx.stroke();
+            
+            // Inner circle
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, innerRadius, 0, 2 * Math.PI);
+            ctx.strokeStyle = '#282C34';
+            ctx.lineWidth = size * 0.015;
+            ctx.stroke();
+            
+            // Center dot
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, dotRadius, 0, 2 * Math.PI);
+            ctx.fillStyle = '#282C34';
+            ctx.fill();
+            
+            // Orbital dots
+            const orbitalRadius = outerRadius * 0.8;
+            const dotSize = size * 0.025;
+            
+            // Top
+            ctx.beginPath();
+            ctx.arc(centerX, centerY - orbitalRadius, dotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Bottom
+            ctx.beginPath();
+            ctx.arc(centerX, centerY + orbitalRadius, dotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Left
+            ctx.beginPath();
+            ctx.arc(centerX - orbitalRadius, centerY, dotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Right
+            ctx.beginPath();
+            ctx.arc(centerX + orbitalRadius, centerY, dotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Diagonal dots
+            const diagRadius = orbitalRadius * 0.7;
+            const smallDotSize = size * 0.02;
+            
+            // Top-left
+            ctx.beginPath();
+            ctx.arc(centerX - diagRadius, centerY - diagRadius, smallDotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Top-right
+            ctx.beginPath();
+            ctx.arc(centerX + diagRadius, centerY - diagRadius, smallDotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Bottom-left
+            ctx.beginPath();
+            ctx.arc(centerX - diagRadius, centerY + diagRadius, smallDotSize, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Bottom-right
+            ctx.beginPath();
+            ctx.arc(centerX + diagRadius, centerY + diagRadius, smallDotSize, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        // Create logos
+        createLogo('canvas192', 192);
+        createLogo('canvas512', 512);
+        createLogo('canvas32', 32);
+        
+        // Download functions
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Add download buttons
+        document.body.innerHTML += '<br><button onclick="downloadCanvas(\'canvas192\', \'logo192.png\')">Download 192x192</button>';
+        document.body.innerHTML += '<button onclick="downloadCanvas(\'canvas512\', \'logo512.png\')">Download 512x512</button>';
+        document.body.innerHTML += '<button onclick="downloadCanvas(\'canvas32\', \'favicon.png\')">Download 32x32</button>';
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
-  "short_name": "TÜMORSİAD",
-  "name": "Tüm Ortadoğu Sanayici ve İş Adamları Derneği",
-  "description": "Ortadoğu bölgesinde ticari ve sanayi işbirliğini geliştirmek için kurulmuş dernek",
+  "short_name": "Kurumsal Web Sitesi",
+  "name": "Kurumsal Web Sitesi",
+  "description": "Kurumsal web sitesi şablonu ve yönetim paneli",
   "icons": [
     {
       "src": "logo192.png",

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Favicon</title>
+</head>
+<body>
+    <canvas id="faviconCanvas" width="32" height="32"></canvas>
+    <br>
+    <button onclick="downloadFavicon()">Download Favicon</button>
+    
+    <script>
+        function createFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // Draw background (blue rounded rectangle)
+            ctx.fillStyle = '#1e3a8a';
+            ctx.beginPath();
+            ctx.roundRect(0, 0, 32, 32, 6);
+            ctx.fill();
+            
+            // Draw "K" letter in white
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 20px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('K', 16, 16);
+        }
+        
+        function downloadFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Create favicon on load
+        createFavicon();
+    </script>
+</body>
+</html>
